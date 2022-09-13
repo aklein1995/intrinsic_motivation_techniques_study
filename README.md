@@ -1,6 +1,6 @@
 # An Evaluation Study of Intrinsic Motivation Techniques Applied to Reinforcement Learning over Hard Exploration Environments
 
-This is the pytorch implementation of [CD-MAKE 2022](https://cd-make.net/) paper <br>*An Evaluation Study of Intrinsic Motivation Techniques Applied to Reinforcement Learning over Hard Exploration Environments*,<br> which can be found either in [Springer](https://link.springer.com/chapter/10.1007/978-3-031-14463-9_13) or [Arxiv](https://arxiv.org/abs/2205.11184).
+This is the pytorch implementation of [Cross Domain Conference for Machine Learning and Knowledge Extraction (CD-MAKE)](https://cd-make.net/) 2022 paper: <br>*An Evaluation Study of Intrinsic Motivation Techniques Applied to Reinforcement Learning over Hard Exploration Environments*,<br> which can be found either in [Springer](https://link.springer.com/chapter/10.1007/978-3-031-14463-9_13) or [Arxiv](https://arxiv.org/abs/2205.11184).
 
 The implementation is based on the code provided in [`rl-starter-files`](https://github.com/lcswillems/rl-starter-files) and is built to carry out experiments in [`MiniGrid`](https://github.com/Farama-Foundation/MiniGrid). This work was developed to analyze the impact of intrinsic motivation techniques in hard-exploration/sparse-rewards environments where base RL-algorithms are not sufficient to learn these kind of tasks.
 
