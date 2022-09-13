@@ -8,7 +8,7 @@ The implementation is based on the code provided in [`rl-starter-files`](https:/
 
 ## Installation
 
-1. Clone this repository.
+1. Clone this repository (tested with **Python 3.6**).
 
 2. Install the dependencies with *pip*, so that `gym-minigrid`(environment), `pytorch` and other necessary packages/libraries are installed:
 
