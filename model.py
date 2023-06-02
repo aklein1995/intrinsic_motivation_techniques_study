@@ -90,10 +90,15 @@ class CriticModel_RAPID(nn.Module):
         x = self.critic_int(embedding)
         value_int = x.squeeze(1)
 
-        if len(memory)>0:
-            return value_ext, value_int, memory
+        if len(memory) > 0:
+            return value_ext, memory
         else:
-            return value_ext, value_int
+            return value_ext
+
+        # if len(memory)>0:
+        #     return value_ext, value_int, memory
+        # else:
+        #     return value_ext, value_int
 
 class ACModelRIDE(nn.Module, torch_ac.RecurrentACModel):
     def __init__(self, obs_space, action_space, use_intcoefs=0, use_memory=False, use_text=False):
@@ -180,11 +185,15 @@ class ACModelRIDE(nn.Module, torch_ac.RecurrentACModel):
         x = self.critic_ext(embedding)
         value_ext = x.squeeze(1)
 
-        x = self.critic_int(embedding)
-        value_int = x.squeeze(1)
+        # x = self.critic_int(embedding)
+        # value_int = x.squeeze(1)
 
 
         if len(memory)>0:
-            return dist, value_ext, value_int, memory
+            return dist, value_ext, memory
         else:
-            return dist, value_ext, value_int
+            return dist, value_ext
+        # if len(memory)>0:
+        #     return dist, value_ext, value_int, memory
+        # else:
+        #     return dist, value_ext, value_int
