@@ -4,7 +4,7 @@ This is the pytorch implementation of [Cross Domain Conference for Machine Learn
 
 The implementation is based on the code provided in [`rl-starter-files`](https://github.com/lcswillems/rl-starter-files) and is built to carry out experiments in [`MiniGrid`](https://github.com/Farama-Foundation/MiniGrid). This work was developed to analyze the impact of intrinsic motivation techniques in hard-exploration/sparse-rewards environments where base RL-algorithms are not sufficient to learn these kind of tasks.
 
-<p align="center"><img src="README-rsrc/macro-image.pdf"></p>
+<p align="center"><img src="README-rsrc/macro_image_im_study.png"></p>
 
 ## Installation
 
