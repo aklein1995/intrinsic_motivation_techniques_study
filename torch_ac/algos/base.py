@@ -337,7 +337,7 @@ class BaseAlgo(ABC):
                     self.visited_state_in_episode[i] = torch.tensor([self.episodic_counts[penv].check_ifnot_already_visited(next_obs=nobs,actions=act) \
                                                         for penv,(ob,nobs,coords,act) in enumerate(zip(input_current_obs.image, input_next_obs.image, agent_pos, action))])
 
-                    self.rewards_int[i] = rewards_int_torch * self.visited_state_in_episode[i]
+                    self.rewards_int[i] = rewards_int_torch = rewards_int_torch * self.visited_state_in_episode[i]
 
                 # To use episodic counts (mandatory in the case of ride)
                 if self.use_episodic_counts or self.use_only_not_visited:
@@ -349,7 +349,7 @@ class BaseAlgo(ABC):
                     # Divide/multiply by episodic counts
 
                         current_episode_count_reward = torch.from_numpy(current_episode_count_reward).to(self.device)
-                        self.rewards_int[i] = rewards_int_torch * current_episode_count_reward.squeeze(1)
+                        self.rewards_int[i] = rewards_int_torch = rewards_int_torch * current_episode_count_reward.squeeze(1)
                         # print('Actual rewards:',rewards_int_torch)
                         # print('Current episode counter:',current_episode_count_reward)
                         # print('Final Rewards:', self.rewards_int[i])
